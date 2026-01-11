@@ -1,11 +1,11 @@
 def format_phone_number(number):
-    if number is None:  
-        return ''  # Base case: return an empty string if there's nothing left to process
+    if not number:  
+        return ""  # Base case: return an empty string if there's nothing left to process
     
-    if number[0].___:  
-        return number[___] + format_phone_number(___)  # Keep digits and process the rest recursively
+    if number[0].isdigit():  
+        return number[0] + format_phone_number(number[1:])  # Keep digits and process the rest recursively
     else:
-        return format_phone_number(___)  # Skip non-digit characters and continue recursively
+        return format_phone_number (number[1:])  # Skip non-digit characters and continue recursively
 
 # Testing the result
 print(format_phone_number("(123) 456-7890"))
